@@ -1,0 +1,115 @@
+.events-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.events-capture-entry {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.events-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.events-filter-chip {
+  border: 1px solid var(--border-glass);
+  background: var(--overlay-subtle);
+  color: var(--text-secondary);
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.events-filter-chip.active {
+  color: white;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+}
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+}
+
+.event-manager-card {
+  padding: 1rem;
+}
+
+.event-manager-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.event-manager-main {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.event-manager-row {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.event-manager-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  color: var(--text-secondary);
+  font-size: 0.86rem;
+}
+
+.event-manager-actions {
+  display: flex;
+  gap: 0.55rem;
+  align-items: flex-start;
+}
+
+.event-manager-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.event-manager-form .ui-textarea,
+.event-manager-source {
+  grid-column: 1 / -1;
+}
+
+.event-manager-source {
+  border-top: 1px solid var(--border-glass);
+  padding-top: 0.85rem;
+}
+
+.event-manager-source pre {
+  margin-top: 0.6rem;
+  white-space: pre-wrap;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  background: var(--overlay-subtle);
+  border: 1px solid var(--border-glass);
+  border-radius: 12px;
+  padding: 0.8rem;
+}
+
+@media (max-width: 760px) {
+  .event-manager-head,
+  .event-manager-actions {
+    flex-direction: column;
+  }
+
+  .event-manager-form {
+    grid-template-columns: 1fr;
+  }
+}

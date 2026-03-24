@@ -1,0 +1,36 @@
+.layout-container {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+.layout-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 24px 16px 32px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.page-content {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 2rem;
+  position: relative;
+  /* Scrollbar fix for content */
+  padding-right: 8px;
+}
+
+/* Glass background overlay for the main area to separate from base body */
+.page-content::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 300px;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 100% 0%, rgba(59, 130, 246, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
