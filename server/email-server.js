@@ -42,12 +42,12 @@ function imapClient(body) {
 }
 
 let cachedEmailConfig = {
-  email: 'michaelho1117@gmail.com',
-  appPassword: 'eksc epku qvur dahg',
-  imapHost: 'imap.gmail.com',
-  imapPort: 993,
-  smtpHost: 'smtp.gmail.com',
-  smtpPort: 465
+  email: process.env.EMAIL_ACCOUNT || '',
+  appPassword: process.env.EMAIL_APP_PASSWORD || '',
+  imapHost: process.env.EMAIL_IMAP_HOST || 'imap.gmail.com',
+  imapPort: Number(process.env.EMAIL_IMAP_PORT || 993),
+  smtpHost: process.env.EMAIL_SMTP_HOST || 'smtp.gmail.com',
+  smtpPort: Number(process.env.EMAIL_SMTP_PORT || 465)
 }
 let syncTimer = null
 let isSyncing = false

@@ -1,4 +1,4 @@
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY || 'AIzaSyAMlRjni7jCfS-DjDt4LlyDdIa1wEW3mIo'
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY || ''
 const GEMINI_MODEL_CANDIDATES = [
   process.env.GEMINI_MODEL,
   'gemini-3.1-flash-lite-preview',
